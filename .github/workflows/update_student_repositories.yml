@@ -15,7 +15,8 @@ jobs:
 
           python3 -m pip install -q setuptools
           python3 -m pip install -q git+"$classroom_tools_url"
-
+          python3 -m pip install -q matplotlib
+          
           python3 -m classroom_tools.student_repositories.delete_workflows \
             --token=${{ secrets.REPO_WORKFLOW_PAT }} \
             --org_name="$org_name" \
